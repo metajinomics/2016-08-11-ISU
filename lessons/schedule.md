@@ -8,7 +8,7 @@ title: schedule
 #### <a name="22"></a> Thursday 11 August 2016
 | Day | Time       | Activity        | 
 | ------------- |:-------------:| :-----:|
-| Monday | 09:00 - 09:15    | Introduction to Data Carpentry | 
+| Thursday | 09:00 - 09:15    | Introduction to Data Carpentry | 
 | | 09:15 - 09:30	| Pre-class survey|
 | | 9:30 - 10:00	| Introduction on data ditiness|
 | | 10:00 - 10:30 |	Introduction to cloud computing|
@@ -24,7 +24,7 @@ title: schedule
 #### <a name="23"></a> Friday 12 August 2016
 | Day | Time       | Activity        | 
 | ------------- |:-------------:| :-----:|
-| Monday | 09:00 - 09:30		| Before we start with R|
+| Friday | 09:00 - 09:30		| Before we start with R|
 | | 09:30 - 10:00		| Introduction to R|
 | | 10:00 - 10:30		| Coffee break|
 | | 10:30 - 11:00		| Starting with data|
