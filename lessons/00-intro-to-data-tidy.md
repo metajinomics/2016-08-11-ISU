@@ -1,6 +1,6 @@
 ---
-layout: lesson
-root: ../
+layout: page
+root: ..
 title: Data Organization
 minutes: 20
 author: Adina Howe
