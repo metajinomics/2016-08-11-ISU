@@ -10,7 +10,7 @@ title: schedule
 | ------------- |:-------------:| :-----:|
 | Thursday | 09:00 - 09:15    | Introduction to Data Carpentry (Jin Choi)| 
 | | 09:15 - 09:30	| Pre-class survey|
-| | 9:30 - 10:00	| Introduction on data ditiness|
+| | 9:30 - 10:00	| Introduction on data tidiness|
 | | 10:00 - 10:30 |	Introduction to cloud computing |
 | | 10:30 - 11:00 |	Coffee break|
 | | 11:00 - 12:00	| Unix file system (Fan Yang)|
