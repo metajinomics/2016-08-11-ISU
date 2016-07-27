@@ -10,8 +10,8 @@ title: schedule
 | ------------- |:-------------:| :-----:|
 | Thursday | 09:00 - 09:15    | Introduction to Data Carpentry (Jin Choi)| 
 | | 09:15 - 09:30	| Pre-class survey|
-| | 9:30 - 10:00	| [Introduction on data tidiness](http://www.datacarpentry.org/2015-08-24-ISU/lessons/00-intro-to-data-tidy.html)|
-| | 10:00 - 10:30 |	[Introduction to cloud computing](https://github.com/datacarpentry/2015-08-24-ISU/blob/gh-pages/lessons/0.cloud-introduction.Rmd) |
+| | 9:30 - 10:00	| [Introduction on data tidiness](http://www.datacarpentry.org/2015-08-24-ISU/lessons/00-intro-to-data-tidy.html) (Fan Yang)|
+| | 10:00 - 10:30 |	[Introduction to cloud computing](https://github.com/datacarpentry/2015-08-24-ISU/blob/gh-pages/lessons/0.cloud-introduction.Rmd) (Fan Yang) |
 | | 10:30 - 11:00 |	Coffee break|
 | | 11:00 - 12:00	| [Unix file system](http://www.datacarpentry.org/2015-08-24-ISU/lessons/04_the_filesystem.html) (Fan Yang)|
 | | 12:00 - 13:00	| Lunch break|
