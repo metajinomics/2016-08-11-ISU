@@ -29,7 +29,7 @@ title: schedule
 | | 10:30 - 11:00		| Starting with data|
 | | 11:00 - 12:00		| Data frames|
 | | 12:00 - 13:00		| Lunch Break|
-| | 13:00 - 14:15		| Data manipulation with dplyr (Fan Yang)|
-| | 14:15 - 14:30		| Coffee break|
-| | 14:30 - 15:30		| Data visualization (Carolyn Lawrence-Dill)|
-| | 15:30 - 16:00		| Review and wrap-up|
+| | 13:00 - 14:00		| Data manipulation with dplyr (Fan Yang)|
+| | 14:00 - 14:15		| Coffee break|
+| | 14:15 - 15:45		| Data visualization (Carolyn Lawrence-Dill)|
+| | 15:45 - 16:00		| Review and wrap-up|
