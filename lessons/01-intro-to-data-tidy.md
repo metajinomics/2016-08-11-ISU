@@ -1,5 +1,5 @@
 ---
-layout: workshop
+layout: lesson
 root: ../
 title: Data Organization
 minutes: 20
