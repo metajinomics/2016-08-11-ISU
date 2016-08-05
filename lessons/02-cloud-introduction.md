@@ -1,6 +1,6 @@
 ---
-layout: lesson
-root: .
+layout: page
+root: ../
 title: Cloud Introduction
 minutes: 20
 author: Adina Howe
