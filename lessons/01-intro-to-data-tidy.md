@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: workshop
 root: ../
 title: Data Organization
 minutes: 20
