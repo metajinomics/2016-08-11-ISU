@@ -1,6 +1,6 @@
 ---
-layout: lesson
-root: .
+layout: page
+root: ../
 title: 
 minutes: 20
 author: Sheldon McKay
