@@ -1,6 +1,6 @@
 ---
 layout: page
-root: ..
+root: ../
 title: schedule
 ---
 
