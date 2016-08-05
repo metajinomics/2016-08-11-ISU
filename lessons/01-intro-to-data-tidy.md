@@ -95,7 +95,6 @@ Discuss:  To keep or not keep Raw data?  What are the advantages?  Disadvantages
 
 Here's what the data organization of the sequencing facility looks like:
 
-![](https://metajinomics.github.io/2016-08-11-ISU/lessons/00-seq-facility-data-structure_small.jpg)
 ![directory](img/00-seq-facility-data-structure_small.jpg)
 
 ## Exercise.  
