@@ -195,7 +195,10 @@ When you check your history later, it will help your remember what you did!
 
 ### D. Document your work
 
-To save a record, let's cat all fastqc summary.txts into one full_report.txt and move this to ``~/dc_workshop/docs``. You can use wildcards in paths as well as file names.  Do you remember how we said 'cat' is really meant for concatenating text files?
+
+To save a record, let's cat all fastqc summary.txts into one full_report.txt and move this to  
+``~/dc_workshop/docs``. You can use wildcards in paths as well as file names.  Do you remember how we said 'cat' is really meant for concatenating text files?
+
 
 ```bash    
 cat */summary.txt > ~/dc_workshop/docs/fastqc_summaries.txt
@@ -285,11 +288,11 @@ One should always ask for the bad news first.  Trimmomatic only operates on
 one input file at a time and we have more than one input file.  The good news?
 We already know how to use a for loop to deal with this situation.
 ```
-    $ for infile in *.fastq
-        >do
-        >outfile=$infile\_trim.fastq
-        >java -jar ~/Trimmomatic-0.32/trimmomatic-0.32.jar SE $infile $outfile SLIDINGWINDOW:4:20 MINLEN:20
-        >done
+$ for infile in *.fastq
+>do
+>outfile=$infile\_trim.fastq
+>java -jar ~/Trimmomatic-0.32/trimmomatic-0.32.jar SE $infile $outfile SLIDINGWINDOW:4:20 MINLEN:20
+>done
 ```
 Do you remember how the first specifies a variable that is assigned the value of each item in the list in turn?  We can call it whatever we like.  This time it is called infile.  Note that the third line of this for loop is creating a second variable called outfile.  We assign it the value of $infile with '_trim.fastq' appended to it.  The '\' escape character is used so the shell knows that whatever follows \ is not part of the variable name $infile.  There are no spaces before or after the '='.
 
