@@ -100,7 +100,7 @@ The main functions of FastQC are
 ```   
     $ cd
 ```
-    # this command takes us to the home directory
+this command takes us to the home directory
 ```    
     $ mkdir dc_workshop
 ```
