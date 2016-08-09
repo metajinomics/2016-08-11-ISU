@@ -126,15 +126,15 @@ $ mv ~/.dc_sampledata_lite/untrimmed_fastq/ ~/dc_workshop/data/
 1. Navigate to the initial fastq dataset
    
  ```
-    $ cd ~/dc_workshop/data/untrimmed_fastq/
+$ cd ~/dc_workshop/data/untrimmed_fastq/
  ```
 
 To run the fastqc program, we call it from its location in ``~/FastQC``.  fastqc will accept multiple file names as input, so we can use the *.fastq wildcard.
 2. Run FastQC on all fastq files in the directory
 
 ```
-    $ ~/FastQC/fastqc *.fastq
- ```
+$ ~/FastQC/fastqc *.fastq
+```
 
 Now, let's create a home for our results
 
@@ -145,8 +145,8 @@ $ mkdir ~/dc_workshop/results/fastqc_untrimmed_reads
 3. Next, move the files there (recall, we are still in ``~/dc_workshop/data/untrimmed_fastq/``)
 
 ```bash 
-    $ mv *.zip ~/dc_workshop/results/fastqc_untrimmed_reads/
-    $ mv *.html ~/dc_workshop/results/fastqc_untrimmed_reads/
+$ mv *.zip ~/dc_workshop/results/fastqc_untrimmed_reads/
+$ mv *.html ~/dc_workshop/results/fastqc_untrimmed_reads/
 ```
 ###C. Results
 
@@ -154,7 +154,7 @@ Lets examine the results in detail
 
 1. Navigate to the results and view the directory contents
 
-   ```bash
+```bash
 $ cd ~/dc_workshop/results/fastqc_untrimmed_reads/
 $ ls
 ```
@@ -180,6 +180,7 @@ $ for zip in *.zip
 This loop is basically a simple program.  When it runs, it will run unzip once for each file (whose name is stored in the $zip variable). The contents of each file will be unpacked into a separate directory by the unzip program.
 
 The for loop is interpreted as a multipart command.  If you press the up arrow on your keyboard to recall the command, it will be shown like so:
+
 ```bash
     for zip in *.zip; do echo File $zip; unzip $zip; done
 ```
@@ -235,7 +236,7 @@ This command tells *Trimmomatic* to run on a Single End file (``SRR_0156.fastq``
 
 1. Go to the untrimmed fastq data location:
 
-   ```bash
+```bash
 $ cd /home/dcuser/dc_workshop/data/untrimmed_fastq
 ```
 
@@ -243,7 +244,7 @@ The command line incantation for trimmomatic is more complicated.  This is where
 
 The general form of the command is:
 
-   ```bash
+```bash
 java -jar ~/Trimmomatic-0.32/trimmomatic-0.32.jar inputfile outputfile OPTION:VALUE...
 ```    
 'java -jar' calls the Java program, which is needed to run trimmomargumentstic, which lived in a 'jar' file (trimmomatic-0.32.jar), a special kind of java archive that is often used for programs written in the Java programing language.  If you see a new program that ends in '.jar', you will know it is a java program that is executed 'java -jar program name'.  The 'SE' argument is a keyword that specifies we are working with single-end reads.
@@ -252,10 +253,11 @@ The next two arguments are input file and output file names.  These are then fol
 
 
 So, for the single fastq input file 'SRR098283.fastq', the command would be:
-   ```bash
+
+```bash
 $ java -jar /home/dcuser/Trimmomatic-0.32/trimmomatic-0.32.jar SE SRR098283.fastq \
     SRR098283.fastq_trim.fastq SLIDINGWINDOW:4:20 MINLEN:20
-
+```
     TrimmomaticSE: Started with arguments: SRR098283.fastq SRR098283.fastq_trim.fastq SLIDINGWINDOW:4:20 MINLEN:20
     Automatically using 2 threads
     Quality encoding detected as phred33
@@ -263,21 +265,21 @@ $ java -jar /home/dcuser/Trimmomatic-0.32/trimmomatic-0.32.jar SE SRR098283.fast
     TrimmomaticSE: Completed successfully
 
 So that worked and we have a new fastq file.
-
+```
     $ ls SRR098283*
       SRR098283.fastq  SRR098283.fastq_trim.fastq
-
+```
 Now we know how to run trimmomatic but there is some good news and bad news.  
 One should always ask for the bad news first.  Trimmomatic only operates on 
 one input file at a time and we have more than one input file.  The good news?
 We already know how to use a for loop to deal with this situation.
-
+```
     $ for infile in *.fastq
         >do
         >outfile=$infile\_trim.fastq
         >java -jar ~/Trimmomatic-0.32/trimmomatic-0.32.jar SE $infile $outfile SLIDINGWINDOW:4:20 MINLEN:20
         >done
-
+```
 Do you remember how the first specifies a variable that is assigned the value of each item in the list in turn?  We can call it whatever we like.  This time it is called infile.  Note that the third line of this for loop is creating a second variable called outfile.  We assign it the value of $infile with '_trim.fastq' appended to it.  The '\' escape character is used so the shell knows that whatever follows \ is not part of the variable name $infile.  There are no spaces before or after the '='.
 
 
