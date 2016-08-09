@@ -23,7 +23,7 @@ title: schedule
 #### <a name="23"></a> Friday 12 August 2016
 | Day | Time       | Activity        | 
 | ------------- |:-------------:| :-----:|
-| Friday | 09:00 - 09:30		| [Before we start with R](http://tracykteal.github.io/R-genomics/00-before-we-start.html)(Jin Choi)|
+| Friday | 09:00 - 09:30		| [Install R](https://cran.r-project.org) and [Install Rstudio](https://www.rstudio.com/products/rstudio/download2/)[Before we start with R](http://tracykteal.github.io/R-genomics/00-before-we-start.html)(Jin Choi)|
 | | 09:30 - 10:00		| [Introduction to R](http://tracykteal.github.io/R-genomics/01-intro-to-R.html) (Jin Choi)|
 | | 10:00 - 10:30		| Coffee break|
 | | 10:30 - 11:00		| [Starting with data](http://tracykteal.github.io/R-genomics/02-starting-with-data.html)(Jin Choi)|
