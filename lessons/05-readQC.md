@@ -96,7 +96,7 @@ The main functions of FastQC are
 ## Running FASTQC
 ### A. Stage your data
 
-1. Create a working directory for your analysi
+1. Create a working directory for your analysis
 
 ```   
     $ cd
@@ -125,26 +125,26 @@ $ mv ~/.dc_sampledata_lite/untrimmed_fastq/ ~/dc_workshop/data/
 
 1. Navigate to the initial fastq dataset
    
-    ```
+ ```
     $ cd ~/dc_workshop/data/untrimmed_fastq/
-    ```
+ ```
 
 To run the fastqc program, we call it from its location in ``~/FastQC``.  fastqc will accept multiple file names as input, so we can use the *.fastq wildcard.
 2. Run FastQC on all fastq files in the directory
 
-    ```
+```
     $ ~/FastQC/fastqc *.fastq
-    ```
+ ```
 
 Now, let's create a home for our results
-    ```
-    $ mkdir ~/dc_workshop/results/fastqc_untrimmed_reads
-    ```
+```
+$ mkdir ~/dc_workshop/results/fastqc_untrimmed_reads
+```
 3. Next, move the files there (recall, we are still in ``~/dc_workshop/data/untrimmed_fastq/``)
-   ```bash 
+```bash 
     $ mv *.zip ~/dc_workshop/results/fastqc_untrimmed_reads/
     $ mv *.html ~/dc_workshop/results/fastqc_untrimmed_reads/
-    ```
+```
 ###C. Results
 
 Lets examine the results in detail
@@ -159,13 +159,13 @@ $ ls
  > The zip files need to be unpacked with the 'unzip' program.  
 2. Use unzip to unzip the FastQC results:
 
-   ```bash
+```bash
 $ unzip *.zip
 ```
 Did it work? No, because 'unzip' expects to get only one zip file.  Welcome to the real world. We *could* do each file, one by one, but what if we have 500 files?  There is a smarter way. We can save time by using a simple shell 'for loop' to iterate through the list of files in *.zip. After you type the first line, you will get a special '>' prompt to type next next lines. You start with 'do', then enter your commands, then end with 'done' to execute the loop.
 3. Build a ``for`` loop to unzip the files
 
-   ```bash 
+```bash 
 $ for zip in *.zip
 > do
 > unzip $zip
@@ -177,7 +177,7 @@ $ for zip in *.zip
 This loop is basically a simple program.  When it runs, it will run unzip once for each file (whose name is stored in the $zip variable). The contents of each file will be unpacked into a separate directory by the unzip program.
 
 The for loop is interpreted as a multipart command.  If you press the up arrow on your keyboard to recall the command, it will be shown like so:
-   ```bash
+```bash
     for zip in *.zip; do echo File $zip; unzip $zip; done
 ```
 
