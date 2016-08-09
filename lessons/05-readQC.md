@@ -42,9 +42,9 @@ so for example in our data set, one complete read is:
 This is a pretty bad read. 
 
 Notice that line 4 is:    
-```
-#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-```
+
+    #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 
 As mentioned above, line 4 is a encoding of the quality. In this case, the code is the [ASCII](https://en.wikipedia.org/wiki/ASCII#ASCII_printable_code_chart) character table. According to the chart a '#' has the value 35 and '!' has the value 33 - **But these values are not actually the quality scores!** There are actually several historical differences in how Illumina and other players have encoded the scores. Heres the chart from wikipedia:
 
@@ -97,18 +97,19 @@ The main functions of FastQC are
 ### A. Stage your data
 
 1. Create a working directory for your analysis
-   
+```   
     $ cd
+```
     # this command takes us to the home directory
-    
+```    
     $ mkdir dc_workshop
-
+```
 2. Create three three subdirectories
-
+```
     $ mkdir dc_workshop/data
     $ mkdir dc_workshop/docs
     $ mkdir dc_workshop/results
-
+```
   > The sample data we will be working with is in a hidden directory (placing a '.' in front of a directory name hides the directory. In the next step we will move some of those hidden files into our new dirctories to start our project. 
 3. Move our sample data to our working (home) directory
    
@@ -152,7 +153,8 @@ $ ls
 ```
    
  > The zip files need to be unpacked with the 'unzip' program.  
-2. Use unzip to unzip the FastQC results: 
+2. Use unzip to unzip the FastQC results:
+
    ```bash
 $ unzip *.zip
 ```
