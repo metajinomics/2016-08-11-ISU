@@ -2,14 +2,14 @@
 layout: page
 root: ../
 title: 
-author: Sheldon McKay 
+author: Sheldon McKay, Fan Yang
 ---
 
 ## Searching files using shell
 
-Adapted from the lesson by Tracy Teal.
+Adapted from the lesson by Tracy Teal and Adina Howe.
 Original contributors:
-Paul Wilson, Milad Fatenejad, Sasha Wood and Radhika Khetani for Software Carpentry (http://software-carpentry.org/)
+Paul Wilson, Milad Fatenejad, Sasha Wood, Radhika Khetani, and Adina Howe for Software Carpentry (http://software-carpentry.org/)
 
 ****
 
@@ -17,6 +17,9 @@ We showed a little how to search within a file using `less`. We can also
 search within files without even opening them, using `grep`. Grep is a command-line
 utility for searching plain-text data sets for lines matching a string or regular expression.
 Let's give it a try!
+
+Let's navigate into directory `untrimmed_fastq`    
+Hint: it's in directory `dc_sample_data`, use `cd`
 
 Suppose we want to see how many reads in our file have really bad, with 10 consecutive Ns  
 Let's search for the string NNNNNNNNNN in file 
@@ -40,11 +43,12 @@ for example:
 ****
 **Exercise**
 
-1) Search for the sequence GNATNACCACTTCC in SRR098026.fastq.
+1) Search for the sequence `GNATNACCACTTCC` in `SRR098026.fastq`.
 In addition to finding the sequence, have your search also return
 the name of the sequence.
 
 2) Search for that sequence in both fastq files.
+
 ****
 
 ## Redirection
@@ -61,8 +65,7 @@ to a file, so that we can look at it later.
 
 The redirection command for putting something in a file is `>`
 
-Let's try it out and put all the sequences that contain 'TTATCCGGATTTATTGGGTTTAAAGGGT'
-from all the files in to another file called 'good-data.txt'
+Let's try it out:
 
     $ grep -B1 -A2 NNNNNNNNNN SRR098026.fastq > bad_reads.txt
 
@@ -74,7 +77,15 @@ If we use '>>', it will append to rather tha overwrite a file.  This can be usef
 saving more than one search, for example:
 
     $ grep -B1 -A2 NNNNNNNNNN SRR098026.fastq > bad_reads.txt     
-    $ grep -B1 -A2 NNNNNNNNNN SRR097977.fastq >> bad_reads.txt     
+    $ grep -B1 -A2 NNNNNNNNNN SRR097977.fastq >> bad_reads.txt   
+
+****
+**Exercise**
+
+Let's put all the sequences that contain `TTATCCGGATTTATTGGGTTTAAAGGGT`
+from all the files in to another file called 'good-data.txt'
+
+****
 
 There's one more useful redirection command that we're going to show, and that's
 called the pipe command, and it is `|`. It's probably not a key on
@@ -187,7 +198,7 @@ OK, we are good to go.
 ****
 **Exercise**
 
-1) How many sample load dates are there?
+1) How many sample load dates are there? Hint: `sort -u` outputs unique records only.
 
 2) How many samples were loaded on each date
 
@@ -198,7 +209,7 @@ OK, we are good to go.
 # Finding files
 
 The `find` program can be used to find files based on arbitrary
-criteria. Navigate to the `data` directory and enter the following
+criteria. Navigate to your home directory (hint: `cd` or `cd ~`) and enter the following
 command:
 
     find . -print
@@ -210,14 +221,14 @@ from the current directory. Let's exclude all of the directories:
 
 This tells `find` to locate only files. Now try these commands:
 
-    find . -type f -name "*1*"
-    find . -type f -name "*1*" -or -name "*2*" -print
-    find . -type f -name "*1*" -and -name "*2*" -print
+    find . -type f -name "*7*"
+    find . -type f -name "*7*" -or -name "*6*" -print
+    find . -type f -name "*7*" -and -name "*6*" -print
 
 The `find` command can acquire a list of files and perform some
 operation on each file. Try this command out:
 
-    find . -type f -exec grep Volume {} \;
+    find . -type f -exec grep Load {} \;
 
 This command finds every file starting from `.`. Then it searches each
 file for a line which contains the word "Volume". The `{}` refers to
@@ -227,30 +238,29 @@ of `grep` for each item the `find` returns.
 
 A faster way to do this is to use the `xargs` command:
 
-    find . -type f -print | xargs grep Volume
+    find . -type f -print | xargs grep Load
 
 `find` generates a list of all the files we are interested in, 
 then we pipe them to `xargs`.  `xargs` takes the items given to it 
 and passes them as arguments to `grep`.  `xargs` generally only creates
 a single instance of `grep` (or whatever program it is running).
 
-* * * * 
-**Short Exercise**
+****
+**Exercise**
 
-Navigate to the `data` directory. Use one `find` command to perform each
+Navigate to your home directory. Use **one** `find` command to perform each
 of the operations listed below (except number 2, which does not
 require a `find` command):
 
-1.  Find any file whose name is "NOTES" within `data` and delete it 
+1.  Find any file whose name contains "youfoundit" from your home directory and determine what's in the file
 
-2.  Create a new directory called `cleaneddata`
+2.  In your home directory, create a new directory called `data_copies`
 
-3.  Move all of the files within `data` to the `cleaneddata` directory
+3.  Find all of the fastq files from your home directory and copy them to the `data_copies` directory. 
 
-4.  Rename all of the files to ensure that they end in `.txt` (note:
-    it is ok for the file name to end in `.txt.txt`
+4.  From your home directory, find all fastq files in diectory `data_copies` and rename all of the copied files to ensure that they end in `.txt` (note: it is ok for the file name to end in `.txt.txt`)
  
-
+****
 
 ## Where can I learn more about the shell?
 
@@ -261,29 +271,8 @@ require a `find` command):
 - man bash
 - Google - if you don't know how to do something, try Googling it. Other people
 have probably had the same question.
+- StackOverflow
 - Learn by doing. There's no real other way to learn this than by trying it
 out.  Write your next paper in nano (really emacs or vi), open pdfs from
 the command line, automate something you don't really need to automate.
 
-
-## Bonus:
-
-**backtick, xargs**: Example find all files with certain text
-
-**alias** -> rm -i
-
-**variables** -> use a path example
-
-**.bashrc**
-
-**du**
-
-**ln**
-
-**ssh and scp**
-
-**Regular Expressions**
-
-**Permissions**
-
-**Chaining commands together**
