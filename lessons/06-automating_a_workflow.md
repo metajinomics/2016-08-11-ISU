@@ -92,7 +92,7 @@ The thing about running programs on the command line without specifying the prog
 
 ****
 
-**Q: What is the advantage of a for loop?**   
+**Q: What is the advantage of using a for loop?**   
 **A:** Some programs are written to handle one file at a time (unlike `grep` in our example). You can use a for loop to repeatly execute the program over all files in a directory.    
 
 **Q: Why use a shell script?**    
