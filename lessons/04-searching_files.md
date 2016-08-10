@@ -87,6 +87,8 @@ from all the files in to another file called 'good-data.txt'
 
 ****
 
+## Pipe
+
 There's one more useful redirection command that we're going to show, and that's
 called the pipe command, and it is `|`. It's probably not a key on
 your keyboard you use very much. What `|` does is take the output that
@@ -114,6 +116,9 @@ just want the number of lines, we can use the `-l` flag for `lines`.
 Redirecting is not super intuitive, but it's really powerful for stringing
 together these different commands, so you can do whatever you need to do.
 
+***    
+**NOTE:**
+
 The philosophy behind these command line programs is that none of them
 really do anything all that impressive. BUT when you start chaining
 them together, you can do some really powerful things really
@@ -121,6 +126,7 @@ efficiently. If you want to be proficient at using the shell, you must
 learn to become proficient with the pipe and redirection operators:
 `|`, `>`, `>>`.
 
+***
 
 
 Finally, let's use the new tools in our kit and a few new ones to example our SRA metadata file.
