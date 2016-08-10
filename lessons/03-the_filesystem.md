@@ -136,8 +136,8 @@ You can also use the command
 $ ls -l   
 ```
     
-    drwxr-x--- 2 dcuser sudo 4096 Jul 30 11:37 sra_metadata   
-    drwxr-xr-x 2 dcuser sudo 4096 Jul 30 11:38 untrimmed_fastq
+    drwxr-x--- 2 dcuser dcuser 4096 Jul 30 11:37 sra_metadata   
+    drwxr-xr-x 2 dcuser dcuser 4096 Jul 30 11:38 untrimmed_fastq
 
 to see whether items in a directory are files or directories. `ls -l` gives a lot more
 information too.
