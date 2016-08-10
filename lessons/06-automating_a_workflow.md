@@ -2,22 +2,37 @@
 layout: page
 root: ../
 title: 
-author: Sheldon McKay 
+author: Sheldon McKay, Fan Yang 
 ---
 
-Shell scripts
+Shell Automation
 ===================
 
 Learning Objectives:
 -------------------
 
-#### What's the goal for this lesson?
-
+* Use a for loop
 * Understand what a shell script is
 * Learn how automate an analytical workflow
 
+## for loop
+A **for** loop is used to repeat a section of commands for many times, for example, over all files in a directory. 
 
-## What is a shell script?
+Recall command `echo`, we can use it to print out all files in the directory `untrimmed_fastq`, navigate to directory `untrimmed_fastq`:
+
+```
+for file in *.fastq; do echo "My file name is $file"; done
+```
+
+****   
+**Exerceise**
+
+Use a for loop to find out how many sequences are there in each fastq file in the directory `untrimmed_fastq`.
+(Hint: fastq sequence names starts with "@SRR". Recall `grep` and `wc` from earlier today.)
+
+****
+
+## Shell script?
 A shell script is basically a text file that contains a list of commands
 that are executed sequentially.  The commands in a shell script are the same
 as you would use on the command line.
@@ -30,9 +45,9 @@ That is also the definition of pretty much any computer program.
 
     #!/bin/bash
 
-    cd ~/dc_sample_data
+    cd ~/dc_sample_data/untrimmed_fastq
 
-    for file in untrimmed_fastq/*.fastq
+    for file in *.fastq
     do
       echo "My file name is $file"
     done
@@ -48,8 +63,8 @@ interpreter (bash) and the name of the script.  By convention, shell script
 use the .sh extension, though this is not enforced.
 
     $ bash myscript.sh
-      My file name is untrimmed_fastq/SRR097977.fastq
-      My file name is untrimmed_fastq/SRR098026.fastq
+      My file name is SRR097977.fastq
+      My file name is SRR098026.fastq
 
 The second was is a little more complicated to set up and requires the shebang line we talked about earlier.
 
@@ -63,22 +78,30 @@ After that, you can run the script as a regular program.
 
     $ ./myscript.sh
     $ bash myscript.sh 
-      My file name is untrimmed_fastq/SRR097977.fastq
-      My file name is untrimmed_fastq/SRR098026.fastq
+      My file name is SRR097977.fastq
+      My file name is SRR098026.fastq
 
-The thing about running programs on the command line is that the shell may not know the location of your executables unless they are in the 'path' of know locations for programs.  So, you need to tell the shell the path to your script, which is './' if it is in the same directory.
+The thing about running programs on the command line without specifying the program `bash` is that the shell may not know the location of your executables unless they are in the 'path' of know locations for programs.  So, you need to tell the shell the path to your script, which is './' if it is in the same directory.
 
 ****
 
 **Exercise**
 
-1) Use nano to save the code above to a script called myscript.sh  
+1) Use nano to save the for loop you created in the first exercise (identify the number of sequences in each fastq file) in this session to a script called `myscript.sh`. (Hint: don't forget to specify what directory the files are in)    
 2) run the script
 
 ****
 
+****
+Q: What is the advantage of a for loop?   
+A: Some programs are written to handle one file at a time (unlike `grep` in our example). You can use a for loop to repeatly execute the program over all files in a directory.    
 
-## A real shell script
+Q: Why use a shell script?    
+A: A shell script can contain many different comments, including multiple for loops.     
+****
+
+
+## A more complicated shell script
 
 Now, let's do something real.  First, recall the code from our our fastqc
 workflow earlier, with a few extra "echo" statements.
