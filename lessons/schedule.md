@@ -17,7 +17,7 @@ title: schedule
 | | 10:30 - 11:00 |	Coffee break|
 | | 11:00 - 12:00	| [Unix file system](https://metajinomics.github.io/2016-08-11-ISU/lessons/03-the_filesystem.html) (Fan Yang)|
 | | 12:00 - 13:00	| Lunch break|
-| | 13:00 - 14:00	| [Seaching files](https://metajinomics.github.io/2016-08-11-ISU/lessons/04_searching_files.html) (Fan Yang)|
+| | 13:00 - 14:00	| [Seaching files](https://metajinomics.github.io/2016-08-11-ISU/lessons/04-searching_files.html) (Fan Yang)|
 | | 14:00 - 14:15	| Coffee break|
 | | 14:15 - 15:00	| [Read QC](https://metajinomics.github.io/2016-08-11-ISU/lessons/05-readQC.html) (Jin Choi)|
 | | 15:00 - 16:00	| [Shell automation](https://metajinomics.github.io/2016-08-11-ISU/lessons/06-automating_a_workflow.html)(Fan Yang); wrap-up|
