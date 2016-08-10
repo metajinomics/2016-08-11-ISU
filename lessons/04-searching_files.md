@@ -22,7 +22,7 @@ Let's navigate into directory `untrimmed_fastq`
 Hint: it's in directory `dc_sample_data`, use `cd`
 
 Suppose we want to see how many reads in our file have really bad, with 10 consecutive Ns  
-Let's search for the string NNNNNNNNNN in file 
+Let's search for the string `NNNNNNNNNN` in file 
 
      $ grep NNNNNNNNNN SRR098026.fastq
 
@@ -128,6 +128,7 @@ learn to become proficient with the pipe and redirection operators:
 
 ***
 
+## Combining tools
 
 Finally, let's use the new tools in our kit and a few new ones to example our SRA metadata file.
 
