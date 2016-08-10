@@ -34,14 +34,14 @@ Although it looks complicated  (and maybe it is), its easy to understand the [fa
 so for example in our data set, one complete read is:
 
 ```
-$ head -n4 SRR098281.fastq 
+$ head -n4 dc_sample_data/untrimmed_fastq/SRR098026.fastq 
 ```
 
 ```
-@SRR098281.1 HWUSI-EAS1599_1:2:1:0:318 length=35
-CNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
-+SRR098281.1 HWUSI-EAS1599_1:2:1:0:318 length=35
-#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+@SRR098026.1 HWUSI-EAS1599_1:2:1:0:968 length=35
+NNNNNNNNNNNNNNNNCNNNNNNNNNNNNNNNNNN
++SRR098026.1 HWUSI-EAS1599_1:2:1:0:968 length=35
+!!!!!!!!!!!!!!!!#!!!!!!!!!!!!!!!!!!
 ```
 
 This is a pretty bad read. 
@@ -49,7 +49,7 @@ This is a pretty bad read.
 Notice that line 4 is:    
 
 ```
-#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!#!!!!!!!!!!!!!!!!!!
 ```
 
 As mentioned above, line 4 is a encoding of the quality. In this case, the code is the [ASCII](https://en.wikipedia.org/wiki/ASCII#ASCII_printable_code_chart) character table. According to the chart a '#' has the value 35 and '!' has the value 33 - **But these values are not actually the quality scores!** There are actually several historical differences in how Illumina and other players have encoded the scores. Heres the chart from wikipedia:
@@ -126,7 +126,7 @@ $ mkdir dc_workshop/results
 3. Move our sample data to our working (home) directory
    
 ```
-$ mv ~/.dc_sampledata_lite/untrimmed_fastq/ ~/dc_workshop/data/
+$ cp -a ~/dc_sample_data/untrimmed_fastq/ ~/dc_workshop/data/
 ```
 
 ###B. Run FastQC
@@ -137,11 +137,18 @@ $ mv ~/.dc_sampledata_lite/untrimmed_fastq/ ~/dc_workshop/data/
 $ cd ~/dc_workshop/data/untrimmed_fastq/
 ```
 
+To make our workshop fast, let's make a subsampled file.
+
+```
+$ head -n 800 SRR097977.fastq > SRR097977.sub.fastq 
+$ head -n 800 SRR098026.fastq > SRR098026.sub.fastq
+```
+
 To run the fastqc program, we call it from its location in ``~/FastQC``.  fastqc will accept multiple file names as input, so we can use the *.fastq wildcard.
 2. Run FastQC on all fastq files in the directory
 
 ```
-$ ~/FastQC/fastqc *.fastq
+$ ~/FastQC/fastqc *.sub.fastq
 ```
 
 Now, let's create a home for our results
@@ -204,6 +211,13 @@ To save a record, let's cat all fastqc summary.txts into one ``full_report.txt``
 cat */summary.txt > ~/dc_workshop/docs/fastqc_summaries.txt
 ```
 
+See how's the qualilty
+
+```
+less SRR097977.sub_fastqc/fastqc_data.txt
+```
+
+Click `q` to exit
 
 ##How to clean reads using *Trimmomatic*
 ###A detailed explanation of features
@@ -265,29 +279,29 @@ The next two arguments are input file and output file names.  These are then fol
 So, for the single fastq input file 'SRR098283.fastq', the command would be:
 
 ```bash
-$ java -jar /home/dcuser/Trimmomatic-0.32/trimmomatic-0.32.jar SE SRR098283.fastq SRR098283.fastq_trim.fastq SLIDINGWINDOW:4:20 MINLEN:20
+$ java -jar ~/Trimmomatic-0.32/trimmomatic-0.32.jar SE SRR097977.sub.fastq SRR097977.sub.trim.fastq SLIDINGWINDOW:4:20 MINLEN:20
 ```
 
 ```
-    TrimmomaticSE: Started with arguments: SRR098283.fastq SRR098283.fastq_trim.fastq SLIDINGWINDOW:4:20 MINLEN:20
-    Automatically using 2 threads
-    Quality encoding detected as phred33
-    Input Reads: 21564058 Surviving: 17030985 (78.98%) Dropped: 4533073 (21.02%)
-    TrimmomaticSE: Completed successfully
+TrimmomaticSE: Started with arguments: SRR097977.sub.fastq SRR097977.sub.trim.fastq SLIDINGWINDOW:4:20 MINLEN:20
+Automatically using 2 threads
+Quality encoding detected as phred33
+Input Reads: 200 Surviving: 187 (93.50%) Dropped: 13 (6.50%)
+TrimmomaticSE: Completed successfully
 ```
 
 So that worked and we have a new fastq file.
 
 ```
-$ ls SRR098283*
-SRR098283.fastq  SRR098283.fastq_trim.fastq
+$ ls SRR097977.sub*
+SRR097977.sub.fastq  SRR097977.sub.trim.fastq
 ```
 Now we know how to run trimmomatic but there is some good news and bad news.  
 One should always ask for the bad news first.  Trimmomatic only operates on 
 one input file at a time and we have more than one input file.  The good news?
 We already know how to use a for loop to deal with this situation.
 ```
-$ for infile in *.fastq
+$ for infile in *.sub.fastq
 >do
 >outfile=$infile\_trim.fastq
 >java -jar ~/Trimmomatic-0.32/trimmomatic-0.32.jar SE $infile $outfile SLIDINGWINDOW:4:20 MINLEN:20
@@ -295,9 +309,10 @@ $ for infile in *.fastq
 ```
 Do you remember how the first specifies a variable that is assigned the value of each item in the list in turn?  We can call it whatever we like.  This time it is called infile.  Note that the third line of this for loop is creating a second variable called outfile.  We assign it the value of $infile with '_trim.fastq' appended to it.  The '\' escape character is used so the shell knows that whatever follows \ is not part of the variable name $infile.  There are no spaces before or after the '='.
 
+Let's check quality after trim
 
-
-
-
-
-
+```
+~/FastQC/fastqc SRR097977.sub.trim.fastq 
+unzip SRR097977.sub.trim_fastqc.zip
+less SRR097977.sub.trim_fastqc/fastqc_data.txt
+```
