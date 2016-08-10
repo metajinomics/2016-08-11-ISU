@@ -10,7 +10,7 @@ title: schedule
 
 | Day | Time       | Activity        | 
 | ------------- |:-------------:| :-----:|
-| Thursday | 09:00 - 09:15    | Introduction to Data Carpentry (Jin Choi)| 
+| Thursday | 09:00 - 09:15    | [Introduction to Data Carpentry](https://github.com/metajinomics/2016-08-11-ISU/raw/gh-pages/lessons/data_carpentry_intro.pdf) (Jin Choi)| 
 | | 09:15 - 09:30	| Pre-class survey|
 | | 9:30 - 10:00	| [Introduction on data tidiness](https://metajinomics.github.io/2016-08-11-ISU/lessons/01-intro-to-data-tidy.html) (Fan Yang)|
 | | 10:00 - 10:30 |	Introduction to cloud computing [Install mobaXterm](http://mobaxterm.mobatek.net)(for Windows user) (Fan Yang) |
