@@ -6,6 +6,7 @@ title: schedule
 
 ## Here is the schedule
 #### <a name="22"></a> Thursday 11 August 2016
+
 | Day | Time       | Activity        | 
 | ------------- |:-------------:| :-----:|
 | Thursday | 09:00 - 09:15    | Introduction to Data Carpentry (Jin Choi)| 
@@ -21,6 +22,7 @@ title: schedule
 | | 15:00 - 16:00	| [Shell automation](http://www.datacarpentry.org/2015-08-24-ISU/lessons/08-automating_a_workflow.html)(Fan Yang); wrap-up|
 
 #### <a name="23"></a> Friday 12 August 2016
+
 | Day | Time       | Activity        | 
 | ------------- |:-------------:| :-----:|
 | Friday | 09:00 - 09:30		| [Install R](https://cran.r-project.org) and [Install Rstudio](https://www.rstudio.com/products/rstudio/download2/) and [Before we start with R](http://tracykteal.github.io/R-genomics/00-before-we-start.html)(Jin Choi)|
