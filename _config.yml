@@ -19,11 +19,18 @@ dc_post_survey  : "https://www.surveymonkey.com/r/dc_post_workshop_v1"
 #--------------------------------------------------------------------------------
 # Settings for Jekyll - should not need to be modified.
 #--------------------------------------------------------------------------------
-markdown        : kramdown
-kramdown        :
-  entity_output : as_input # &mdash; is output as &mdash;
-  smart_quotes  : [39, 39, 34, 34] # decimal for left/right single/double quotes
+##markdown        : kramdown
+##kramdown        :
+##  entity_output : as_input # &mdash; is output as &mdash;
+##  smart_quotes  : [39, 39, 34, 34] # decimal for left/right single/double quotes
 exclude         : [tools]
 markdown	: kramdown
 kramdown	:
-#  extensions: ["tables"]
+  auto_ids:       true
+  footnote_nr:    1
+  entity_output:  as_char
+  toc_levels:     1..6
+  smart_quotes:   lsquo,rsquo,ldquo,rdquo
+  input:          GFM
+  hard_wrap:      false
+  footnote_nr:    1
