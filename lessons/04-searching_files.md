@@ -258,7 +258,7 @@ require a `find` command):
 
 3.  Find all of the fastq files from your home directory and copy them to the `data_copies` directory. 
 
-4.  From your home directory, find all fastq files in diectory `data_copies` and rename all of the copied files to ensure that they end in `.txt` (note: it is ok for the file name to end in `.txt.txt`)
+4.  From your home directory, find all fastq files in diectory `data_copies` and rename all of the copied files to ensure that they end in `.txt` (note: it is ok for the file name to end in `.fastq.txt`)
  
 ****
 
