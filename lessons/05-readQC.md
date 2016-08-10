@@ -61,7 +61,7 @@ As mentioned above, line 4 is a encoding of the quality. In this case, the code 
     LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL....................................................
     !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
     |                         |    |        |                              |                     |
-   33                        59   64       73                            104                   126
+    33                        59   64       73                            104                   126
     0........................26...31.......40                                
                              -5....0........9.............................40 
                                    0........9.............................40 
