@@ -291,7 +291,8 @@ the intermediate directory.
 ****
 **Exercise**
 
-List the 'SRR097977.fastq' file from your home directory **without changing directories**    
+List the 'SRR097977.fastq' file from your home directory **without changing directories**
+
 ****
 
 ### Shortcut: Tab Completion
