@@ -5,6 +5,7 @@ title: schedule
 ---
 
 ## Here is the schedule
+
 #### <a name="22"></a> Thursday 11 August 2016
 
 | Day | Time       | Activity        | 
