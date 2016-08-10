@@ -3,7 +3,7 @@ layout: page
 root: ../
 title: 
 minutes: 20
-author: Sheldon McKay
+author: Sheldon McKay, Fan Yang
 ---
 
 # The Shell
@@ -63,27 +63,28 @@ a shell command are doing.
 
 ## How to access the shell
 
-The shell is already available on Mac and Linux. For Windows, you'll
-have to download a separate program.
+We will be using the shell that's available on Amazon EC2 (linux)
 
+## to launch EC2 instance:
 
 Mac
 ---  
-On Mac the shell is available through Terminal  
+On Mac, you need to start up Terminal  
 Applications -> Utilities -> Terminal  
 Go ahead and drag the Terminal application to your Dock for easy access.
 
 Windows
 -------
-For Windows, we're going to be using gitbash.  
-Download and install [gitbash](http://msysgit.github.io);
+For Windows, we're going to be using MobaXterm.  
 Open up the program.
 
 Linux  
 -----
-You should be set.
+You need to start up Terminal
 
-
+## Launch EC2
+ssh dcuser@LINK_FROM_ETHERPAD
+type in password (Note: cursor will not move)
 
 ## Starting with the shell
 
