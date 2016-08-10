@@ -115,11 +115,13 @@ $ mkdir dc_workshop
 ```
 
 2. Create three three subdirectories
+
 ```
 $ mkdir dc_workshop/data
 $ mkdir dc_workshop/docs
 $ mkdir dc_workshop/results
 ```
+
   > The sample data we will be working with is in a hidden directory (placing a '.' in front of a directory name hides the directory. In the next step we will move some of those hidden files into our new dirctories to start our project. 
 3. Move our sample data to our working (home) directory
    
