@@ -83,8 +83,14 @@ Linux
 You need to start up Terminal
 
 ## Launch EC2
+```
 ssh dcuser@LINK_FROM_ETHERPAD
-type in password (Note: cursor will not move)
+```
+
+Your computer will be unable to verify the authenticity of the host... type **yes** to continue connecting
+
+Then enter the password for the remote instance: 'data4Carp' (Note: cursor will not move)
+
 
 ## Starting with the shell
 
