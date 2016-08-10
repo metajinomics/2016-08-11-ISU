@@ -12,15 +12,15 @@ title: schedule
 | ------------- |:-------------:| :-----:|
 | Thursday | 09:00 - 09:15    | Introduction to Data Carpentry (Jin Choi)| 
 | | 09:15 - 09:30	| Pre-class survey|
-| | 9:30 - 10:00	| [Introduction on data tidiness](https://metajinomics.github.io/2016-08-11-ISU/lessons/00-intro-to-data-tidy.html) (Fan Yang)|
+| | 9:30 - 10:00	| [Introduction on data tidiness](https://metajinomics.github.io/2016-08-11-ISU/lessons/01-intro-to-data-tidy.html) (Fan Yang)|
 | | 10:00 - 10:30 |	Introduction to cloud computing [Install mobaXterm](http://mobaxterm.mobatek.net)(for Windows user) (Fan Yang) |
 | | 10:30 - 11:00 |	Coffee break|
 | | 11:00 - 12:00	| [Unix file system](https://metajinomics.github.io/2016-08-11-ISU/lessons/03-the_filesystem.html) (Fan Yang)|
 | | 12:00 - 13:00	| Lunch break|
-| | 13:00 - 14:00	| [Seaching files](https://metajinomics.github.io/2016-08-11-ISU/lessons/05_searching_files.html) (Fan Yang)|
+| | 13:00 - 14:00	| [Seaching files](https://metajinomics.github.io/2016-08-11-ISU/lessons/04_searching_files.html) (Fan Yang)|
 | | 14:00 - 14:15	| Coffee break|
 | | 14:15 - 15:00	| [Read QC](https://metajinomics.github.io/2016-08-11-ISU/lessons/05-readQC.html) (Jin Choi)|
-| | 15:00 - 16:00	| [Shell automation](https://metajinomics.github.io/2016-08-11-ISU/lessons/08-automating_a_workflow.html)(Fan Yang); wrap-up|
+| | 15:00 - 16:00	| [Shell automation](https://metajinomics.github.io/2016-08-11-ISU/lessons/06-automating_a_workflow.html)(Fan Yang); wrap-up|
 
 #### <a name="23"></a> Friday 12 August 2016
 
