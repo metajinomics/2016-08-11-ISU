@@ -16,8 +16,8 @@ title: schedule
 | | 11:00 - 12:00	| [Unix file system](http://www.datacarpentry.org/2015-08-24-ISU/lessons/04_the_filesystem.html) (Fan Yang)|
 | | 12:00 - 13:00	| Lunch break|
 | | 13:00 - 14:00	| [Seaching files](http://www.datacarpentry.org/2015-08-24-ISU/lessons/05_searching_files.html) (Fan Yang)|
-| | 14:00 - 14:30	| Coffee break|
-| | 14:30 - 15:00	| [Read QC](https://metajinomics.github.io/2016-08-11-ISU/lessons/05-readQC.html) (Jin Choi)|
+| | 14:00 - 14:15	| Coffee break|
+| | 14:15 - 15:00	| [Read QC](https://metajinomics.github.io/2016-08-11-ISU/lessons/05-readQC.html) (Jin Choi)|
 | | 15:00 - 16:00	| [Shell automation](http://www.datacarpentry.org/2015-08-24-ISU/lessons/08-automating_a_workflow.html)(Fan Yang); wrap-up|
 
 #### <a name="23"></a> Friday 12 August 2016
