@@ -379,7 +379,7 @@ navigate amongst them.
 ***
 **Exercise**
 
-Now, list the contents of the /bin directory. Do you see anything
+Now, list the contents of the `/bin` directory. Do you see anything
 familiar in there? 
 How can you tell these are programs rather than plain files?
 
@@ -441,11 +441,15 @@ directory. Now try this command:
 
     $ ls *fastq
 
-This lists every file that ends with a `fastq`. This command:
+This lists every file that ends with a `fastq`. 
+
+This command:
 
     $ ls /usr/bin/*.sh
 
 Lists every file in `/usr/bin` that ends in the characters `.sh`.
+
+This command:
 
     $ ls *977.fastq
 
@@ -513,7 +517,7 @@ then you could repeat command #260 by simply entering:
 **Exercise**
 
 1. Find the line number in your history for the last exercise (listing
-files in /bin) and reissue that command.
+files in `/bin`) and reissue that command.
 
 ****
 
