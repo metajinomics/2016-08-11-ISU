@@ -92,12 +92,11 @@ The thing about running programs on the command line without specifying the prog
 
 ****
 
-****
-Q: What is the advantage of a for loop?   
-A: Some programs are written to handle one file at a time (unlike `grep` in our example). You can use a for loop to repeatly execute the program over all files in a directory.    
+**Q: What is the advantage of a for loop?**   
+**A:** Some programs are written to handle one file at a time (unlike `grep` in our example). You can use a for loop to repeatly execute the program over all files in a directory.    
 
-Q: Why use a shell script?    
-A: A shell script can contain many different comments, including multiple for loops.     
+**Q: Why use a shell script?**    
+**A:** A shell script can contain many different comments, including multiple for loops.     
 ****
 
 
@@ -109,7 +108,7 @@ workflow earlier, with a few extra "echo" statements.
     cd ~/dc_workshop/data/untrimmed_fastq/   
 
     echo "Running fastqc..." 
-    ~/FastQC/fastqc *.fastq   
+    ~/FastQC/fastqc *.sub.fastq   
     mkdir -p ~/dc_workshop/results/fastqc_untrimmed_reads   
 
     echo "saving..."   
@@ -132,12 +131,12 @@ workflow earlier, with a few extra "echo" statements.
 **Exercise**
 
 1) Use nano to create a shell script using with the code above (you can copy/paste),
-named read_qc.sh
+named `read_qc.sh`
 
 2) Run the script
 
 3) Bonus points: Use something you learned earlier to save the output
-of the script to a file while it is running.
+of the script to a file while it is running.     
 ****
 
 
