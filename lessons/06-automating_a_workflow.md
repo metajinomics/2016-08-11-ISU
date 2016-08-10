@@ -97,6 +97,7 @@ The thing about running programs on the command line without specifying the prog
 
 **Q: Why use a shell script?**    
 **A:** A shell script can contain many different comments, including multiple for loops.     
+
 ****
 
 
@@ -137,6 +138,7 @@ named `read_qc.sh`
 
 3) Bonus points: Use something you learned earlier to save the output
 of the script to a file while it is running.     
+
 ****
 
 
