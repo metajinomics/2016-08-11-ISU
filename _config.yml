@@ -26,4 +26,4 @@ kramdown        :
 exclude         : [tools]
 markdown	: kramdown
 kramdown	:
-  extensions: ["tables"]
+#  extensions: ["tables"]
