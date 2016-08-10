@@ -312,7 +312,7 @@ Do you remember how the first specifies a variable that is assigned the value of
 Let's check quality after trim
 
 ```
-~/FastQC/fastqc SRR097977.sub.trim.fastq 
-unzip SRR097977.sub.trim_fastqc.zip
-less SRR097977.sub.trim_fastqc/fastqc_data.txt
+$ ~/FastQC/fastqc SRR097977.sub.trim.fastq 
+$ unzip SRR097977.sub.trim_fastqc.zip
+$ less SRR097977.sub.trim_fastqc/fastqc_data.txt
 ```
