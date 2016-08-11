@@ -11,7 +11,7 @@ title: schedule
 | Day | Time       | Activity        | 
 | ------------- |:-------------:| :-----:|
 | Thursday | 09:00 - 09:15    | [Introduction to Data Carpentry](https://github.com/metajinomics/2016-08-11-ISU/raw/gh-pages/lessons/data_carpentry_intro.pdf) (Jin Choi)| 
-| | 09:15 - 09:30	| [Pre-class survey](https://www.surveymonkey.com/r/dc_pre_workshop_v1)|
+| | 09:15 - 09:30	| [Pre-class survey](http://ucbpsych.qualtrics.com/jfe3/form/SV_1XhhL17azc65jmZ)|
 | | 9:30 - 10:00	| [Introduction on data tidiness](https://metajinomics.github.io/2016-08-11-ISU/lessons/01-intro-to-data-tidy.html) (Fan Yang)|
 | | 10:00 - 10:30 |	Introduction to cloud computing [Install mobaXterm](http://mobaxterm.mobatek.net)(for Windows user) (Fan Yang) |
 | | 10:30 - 11:00 |	Coffee break|
