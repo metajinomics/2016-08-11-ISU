@@ -1,0 +1,63 @@
+Welcome to Software Carpentry Etherpad!
+
+This pad is synchronized as you type, so that everyone viewing this page sees the same text. This allows you to collaborate seamlessly on documents.
+
+Use of this service is restricted to members of the Software Carpentry and Data Carpentry community; this is not for general purpose use (for that, try etherpad.wikimedia.org).
+
+Users are expected to follow our code of conduct: http://software-carpentry.org/conduct.html
+
+All content is publicly available under the Creative Commons Attribution License: https://creativecommons.org/licenses/by/4.0/
+
+
+Put your name next to one of these addresses
+
+Logon
+username: dcuser
+pwd:data4Carp
+
+
+
+
+Once you type in the password, it takes a little bit to connect
+
+ec2-54-205-49-121.compute-1.amazonaws.com  Fan Yang, Fan Yang
+ec2-52-207-236-88.compute-1.amazonaws.comZihao Zheng; Zihao Zheng
+ec2-54-86-65-17.compute-1.amazonaws.comSagnik
+ec2-52-87-236-143.compute-1.amazonaws.comUrminder Singh, Urminder Singh
+ec2-54-165-8-241.compute-1.amazonaws.com Christian / Christian Montes
+ec2-52-23-164-52.compute-1.amazonaws.comAxelle Weeger Axelle Weeger
+ec2-52-23-200-97.compute-1.amazonaws.comEdna Mageto,Edna Mageto
+ec2-54-175-86-196.compute-1.amazonaws.comAllison Birnbaum, Allison Birnbaum
+ec2-54-197-38-195.compute-1.amazonaws.comAvani Khadilkar ; Avani Khadilkar
+ec2-54-167-75-12.compute-1.amazonaws.com Therin Young, Therin Young
+ec2-54-175-16-235.compute-1.amazonaws.com
+ec2-54-167-47-10.compute-1.amazonaws.comLingSze Lee, LingSze Lee
+ec2-52-91-243-68.compute-1.amazonaws.comYang
+ec2-54-208-140-74.compute-1.amazonaws.comBetsa Mantilla, Betsa Mantilla
+ec2-54-173-73-116.compute-1.amazonaws.comMercy Kabahuma; Mercy Kabahuma
+ec2-54-172-114-243.compute-1.amazonaws.com Ian Braun Ian Braun
+ec2-52-90-7-255.compute-1.amazonaws.comKaterina Holan Katerina Holan
+ec2-54-205-219-234.compute-1.amazonaws.comXiyu Peng
+ec2-54-175-246-104.compute-1.amazonaws.comJordan Baumbach, Jordan Baumbach
+ec2-54-175-166-140.compute-1.amazonaws.comDavid Blystone, David Blystone
+ec2-54-166-241-199.compute-1.amazonaws.comTesia Posekany, Tesia Posekany
+ec2-54-164-157-111.compute-1.amazonaws.com   Devin Molnau, Devin Molnau
+ec2-54-86-26-10.compute-1.amazonaws.comAng-Yu Liu,  Ang-Yu Liu
+ec2-54-175-170-83.compute-1.amazonaws.com Jacob Stai, Jacob Stai
+ec2-52-201-218-201.compute-1.amazonaws.comAngela Bunning, Angela Bunning
+ec2-54-173-132-254.compute-1.amazonaws.com
+ec2-54-166-149-125.compute-1.amazonaws.comBrian "Zebosi, Brian Zebosi
+ec2-54-165-74-20.compute-1.amazonaws.comBeatrizMizoguchiBeatrizMizoguchi
+ec2-54-167-81-63.compute-1.amazonaws.comEmmanuel
+ec2-54-85-156-133.compute-1.amazonaws.com
+ec2-52-90-64-207.compute-1.amazonaws.comJames McNellie James McNellie
+ec2-54-196-14-107.compute-1.amazonaws.comJohn Shook, John Shook 
+ec2-54-174-64-73.compute-1.amazonaws.comPaul Otyama Paul Otyama II
+ec2-54-210-89-165.compute-1.amazonaws.comKevinFalk, kevin Falk
+ec2-54-210-27-122.compute-1.amazonaws.com Jules Verne Jules
+ec2-52-23-253-164.compute-1.amazonaws.comBenjamin Trampe, Benjamin Trampe
+
+Dplyr exercise:
+   create a new data table using metadata, by grouping "cit", and "clade", find maximum genome size from each category (cit & clade). Then subset for anything containing C1 in clade. 
+
+
