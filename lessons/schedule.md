@@ -34,5 +34,5 @@ title: schedule
 | | 12:00 - 13:00		| Lunch Break|
 | | 13:00 - 14:00		| [Data manipulation with dplyr](http://tracykteal.github.io/R-genomics/04-dplyr.html) (Fan Yang)|
 | | 14:00 - 14:15		| Coffee break|
-| | 14:15 - 15:45		| [Data visualization](http://tracykteal.github.io/R-genomics/05-data-visualization.html) and [hand out](https://iastate.box.com/s/39teytc8afnea7hga80ykmthsaxtnj26) and [ppt](https://github.com/metajinomics/2016-08-11-ISU/raw/gh-pages/lessons/Lawrence-Dill_Data_Visualization.pdf) (Carolyn Lawrence-Dill and Renee Walton)|
+| | 14:15 - 15:45		| [Data visualization](http://tracykteal.github.io/R-genomics/05-data-visualization.html) and [hand out](https://iastate.box.com/s/39teytc8afnea7hga80ykmthsaxtnj26) and [slide](https://github.com/metajinomics/2016-08-11-ISU/raw/gh-pages/lessons/Lawrence-Dill_Data_Visualization.pdf) (Carolyn Lawrence-Dill and Renee Walton)|
 | | 15:45 - 16:00		| Review and wrap-up|
